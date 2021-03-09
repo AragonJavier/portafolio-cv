@@ -1,0 +1,74 @@
+@import './utilities';
+@import './header';
+.contact__form{
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+.contact__form > *{
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+}
+.contact__form input,
+.contact__form textarea{
+  font-size: 0.85rem;
+  font-family: 'Raleway', 'sans-serif';
+}
+.contact__form input{
+  border: 0;
+  padding-left: 0;
+  border-bottom: thin solid $color-secundary;
+  background-color: transparent;
+}
+.contact__form textarea{
+  border: thin solid $color-secundary;
+  resize: none;
+}
+.contact__form input[type="submit"]{
+margin-top: 0;
+transition: all 0.5s ease-out;
+cursor: pointer;
+}
+.contact__form input[type="submit"]:hover{
+opacity: 0.75;
+}
+.contact__form *::placeholder{
+color: $text-color
+}
+.contact__form--response{
+  width: 400px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #FFf;
+}
+.contact__form--response svg{
+  margin-top: 2rem;
+  width: 4rem;
+  height: 4rem;
+  fill: $color-secundary;
+}
+
+.modal#gracias:target{
+  opacity: 1;
+  pointer-events:auto;
+}
+@media screen and(min-width:1204px){
+  .contact__form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1rem;
+  }
+.contact__form input,
+.contact__form textarea{
+  font-size: 1rem;
+}
+.contact__form textarea,
+.contact__form--loader{
+  grid-column: span 2;
+}
+.contact__form input[type="submit"]{
+  margin-left: 0;
+}
+}

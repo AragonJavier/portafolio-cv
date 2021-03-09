@@ -1,0 +1,26 @@
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(241, 241, 241, 0.24);
+}
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  height: max-content;
+  padding: 2.5rem 0;
+}
+.section {
+  padding: 2rem 1rem;
+}
+.none {
+  display:none;
+}
+.card__social .link:hover{
+color: $color-secundary;
+transition: color 1s;
+
+}
+.title{
+  border-top: thin solid $color-secundary;
+  border-bottom: thin solid $color-secundary;
+padding: 1rem 0;
+}
