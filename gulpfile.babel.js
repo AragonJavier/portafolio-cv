@@ -7,7 +7,7 @@ import concat from "gulp-concat";
 import htmlmin from "gulp-htmlmin";
 // PUG
 import pug from "gulp-pug";
-const production = false;
+const production = true;
 
 // SASS
 import sass from "gulp-sass";
@@ -40,13 +40,6 @@ gulp.task("html", () => {
     .pipe(gulp.dest("./public"));
 });
 
-// gulp.task("style", () => {
-//   return gulp
-//     .src("./src/css/*.css")
-//     .pipe(concat("style-min.css"))
-//     .pipe(postcss(cssPlugins))
-//     .pipe(gulp.dest("./public/css"));
-// });
 // tarea para minificar y juntar en un solo archivo JS  los JS
 gulp.task("babel", () => {
   return gulp
