@@ -7,7 +7,7 @@ import concat from "gulp-concat";
 import htmlmin from "gulp-htmlmin";
 // PUG
 import pug from "gulp-pug";
-const production = true;
+const production = false;
 
 // SASS
 import sass from "gulp-sass";
