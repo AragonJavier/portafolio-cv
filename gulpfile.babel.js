@@ -27,6 +27,9 @@ import clean from "gulp-purgecss";
 // Cache bust
 import cacheBust from "gulp-cache-bust";
 
+// Optimizacion de imagenes
+import imagemin from "gulp-imagemin";
+
 //Tarea minificar el html
 gulp.task("html", () => {
   return gulp
@@ -88,6 +91,19 @@ gulp.task("clean", () => {
       })
     )
     .pipe(gulp.dest("./public/css"));
+});
+
+gulp.task("imgmin", () => {
+  return gulp
+    .src("./src/assets/icons/*")
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.mozjpeg({ quality: 30, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 1 }),
+      ])
+    )
+    .pipe(gulp.dest("./public/assets/icons"));
 });
 
 // tarea por defecto con un watch
