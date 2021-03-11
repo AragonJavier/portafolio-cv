@@ -95,11 +95,11 @@ gulp.task("clean", () => {
 
 gulp.task("imgmin", () => {
   return gulp
-    .src("./src/assets/icons/*")
+    .src("./src/assets/*")
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
-        imagemin.mozjpeg({ quality: 30, progressive: true }),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
         imagemin.optipng({ optimizationLevel: 1 }),
       ])
     )
